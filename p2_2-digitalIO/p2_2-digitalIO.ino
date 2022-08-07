@@ -1,16 +1,13 @@
-int my_button = D0;
+int my_button = D1;
 
 void setup()
 {
-  pinMode(my_button, INPUT);
   pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
+  pinMode(my_button, INPUT_PULLUP);
 }
 
 void loop()
 {
-  Serial.println(digitalRead(my_button));
-
   if(digitalRead(my_button) == HIGH) {
     digitalWrite(LED_BUILTIN, HIGH);
   } else {
