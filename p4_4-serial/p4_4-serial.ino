@@ -1,5 +1,5 @@
 #define WELCOME "\nBienvenido a NodeMCU!"
-#define MENU "Selecciona una de las siguientes opciones:\n1 - Saludar\n2 - Parpadear LED"
+#define MENU "Selecciona una de las siguientes opciones:\n1 - Saludar\n2 - Parpadear LED\n"
 
 String input;
 
@@ -22,9 +22,13 @@ void loop()
 
   if(input == "1") {
     say_hi();
+    Serial.println(MENU);
+    Serial.flush();
   }
   if(input == "2") {
     blink_led();
+    Serial.println(MENU);
+    Serial.flush();
   }
 
   input = "";
