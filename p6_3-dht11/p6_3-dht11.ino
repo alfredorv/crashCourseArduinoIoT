@@ -3,7 +3,7 @@
 
 DHT dht(D1, DHT11);
 
-float humidity;
+float tempF;
 
 void setup()
 {
@@ -13,7 +13,7 @@ void setup()
 
 void loop()
 {
-  humidity = dht.readHumidity();
-  Serial.println("Humedad: " + String(humidity) + "%");
+  tempF = dht.readTemperature(true);
+  Serial.println("Temperatura: " + String(tempF) + "°F");
   delay(2000);
 }
