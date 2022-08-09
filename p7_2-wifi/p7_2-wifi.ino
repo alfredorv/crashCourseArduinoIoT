@@ -17,8 +17,6 @@ void setup()
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(IP);
-
-  Serial.println(WiFi.localIP());
 }
 
 void loop()
