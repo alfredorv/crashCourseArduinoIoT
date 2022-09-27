@@ -44,9 +44,9 @@ void set_rgb_values() {
   Serial.print("green: " + String(green));
   Serial.print("blue: " + String(blue));
 
-  analogWrite(D1, red);
-  analogWrite(D2, green);
-  analogWrite(D3, blue);
+  analogWrite(D1, blue);
+  analogWrite(D2, red);
+  analogWrite(D3, green);
 
   server.send(200, "text/html", html);
 }
